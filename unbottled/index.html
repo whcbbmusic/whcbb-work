@@ -43,9 +43,10 @@
     .scroll{width:118px;height:118px;border:1px solid var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:9px;line-height:1.25;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.scroll:hover{background:var(--paper);color:var(--ink);transform:rotate(5deg)}
     .insight{background:var(--paper);color:var(--ink)}
     .insight .section-label{color:#7b786f}
-    .insight-grid{display:grid;grid-template-columns:.7fr 1.6fr;gap:9vw;align-items:start}
-    .insight p{margin:0;max-width:460px;font-size:19px;line-height:1.5;color:#5f5b54}
-    .insight h2{margin:0;font-size:clamp(58px,8.8vw,142px);line-height:.83;letter-spacing:-.075em;text-transform:uppercase}
+    .insight-grid{display:grid;grid-template-columns:minmax(285px,.72fr) minmax(0,1.28fr);gap:clamp(46px,6vw,110px);align-items:start}
+    .insight p{margin:0;max-width:32ch;font-size:clamp(18px,1.35vw,24px);line-height:1.46;color:#5f5b54;letter-spacing:-.02em}
+    .insight p strong{color:var(--ink);font-weight:800}
+    .insight h2{margin:0;max-width:100%;font-size:clamp(54px,5.45vw,104px);line-height:.88;letter-spacing:-.07em;text-transform:uppercase;overflow-wrap:normal}
     .insight h2 span{font-family:Georgia,serif;font-style:italic;font-weight:400;color:var(--acid);text-transform:none}
     .hooks .section-label{margin-bottom:55px}
     .hook{min-height:62vh;display:flex;align-items:center;border-top:1px solid var(--line);padding:6vw 0;position:relative}
@@ -84,7 +85,7 @@
     @media(max-width:800px){
       .topbar{height:62px}.status{display:none}.brand{font-size:15px}
       section{padding:78px var(--pad)}.hero{padding-top:100px}.hero h1{font-size:clamp(67px,21vw,125px)}.hero h1 .italic{padding-left:8vw}.hero-bottom{grid-template-columns:1fr;align-items:start}.scroll{width:105px;height:105px}
-      .insight-grid{grid-template-columns:1fr;gap:45px}.insight h2{font-size:clamp(52px,14vw,92px)}
+      .insight-grid{grid-template-columns:1fr;gap:45px}.insight p{max-width:38ch}.insight h2{font-size:clamp(50px,12.5vw,82px)}
       .hook{min-height:50vh}.hook h3{font-size:clamp(45px,13vw,78px)}
       .film-head{display:block}.film-head p{margin-top:28px}.film-stage{grid-template-columns:1fr}.film-left{position:relative;top:0;padding-bottom:0}.phone-wrap{padding-top:30px}.phone-screen{min-height:610px}
       .endcard h2,.bonus h2{font-size:clamp(50px,13vw,87px)}
@@ -121,8 +122,8 @@
     <section class="insight" id="insight">
       <div class="section-label reveal">01 / LE POINT DE DÉPART</div>
       <div class="insight-grid">
-        <p class="reveal">Votre shampoing cheveux gras aide à espacer les lavages. Donc le vrai bénéfice n’est pas seulement ce qui se passe sous la douche. C’est le moment où l’on réalise qu’on n’a pas besoin d’y retourner.</p>
-        <h2 class="reveal">ET SI LE SHAMPOING, LUI, <span>LE PRENAIT PERSONNELLEMENT&nbsp;?</span></h2>
+        <p class="reveal">Votre shampoing cheveux gras aide à espacer les lavages.<br><br><strong>Le vrai bénéfice&nbsp;?</strong><br>Le moment où l’on réalise qu’on n’a pas besoin d’y retourner.</p>
+        <h2 class="reveal">ET SI LE<br>SHAMPOING, LUI,<br><span>LE PRENAIT<br>PERSONNELLEMENT&nbsp;?</span></h2>
       </div>
     </section>
 
