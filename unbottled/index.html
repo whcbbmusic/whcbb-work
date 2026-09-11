@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="WHCBB / WORK × UNBOTTLED — une idée créative." />
+  <title>WHCBB / WORK × UNBOTTLED — RELATION TOXIQUE</title>
+  <style>
+    :root{
+      --bg:#0a0a0a;
+      --paper:#f3efe6;
+      --ink:#0a0a0a;
+      --soft:#9a978f;
+      --line:rgba(243,239,230,.16);
+      --acid:#ff4d24;
+      --pad:clamp(20px,3.2vw,52px);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;background:var(--bg);color:var(--paper);
+      font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+    }
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    ::selection{background:var(--acid);color:white}
+    .grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.07;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+    .progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:1002}.progress span{display:block;height:100%;width:0;background:var(--acid)}
+    .topbar{position:fixed;z-index:100;top:0;left:0;right:0;height:68px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(10,10,10,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .brand{font-weight:900;letter-spacing:-.04em;font-size:17px}.brand i{font-style:normal;color:var(--acid);font-weight:400;margin:0 .35em}.brand em{font-style:normal;color:#777;font-weight:400;margin:0 .55em}
+    .status{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#777;font-weight:800}
+    section{position:relative;border-bottom:1px solid var(--line);padding:110px var(--pad)}
+    .hero{min-height:100svh;padding-top:115px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+    .kicker,.section-label{font-size:10px;letter-spacing:.19em;text-transform:uppercase;font-weight:800;color:#777}
+    .hero h1{margin:4vh 0 0;font-size:clamp(72px,14.2vw,220px);line-height:.76;letter-spacing:-.085em;text-transform:uppercase;font-weight:900;position:relative;z-index:2}
+    .hero h1 span{display:block}.hero h1 .italic{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;color:var(--acid);padding-left:20vw}
+    .ghost{position:absolute;left:50%;top:53%;transform:translate(-50%,-50%) rotate(-6deg);font-family:Georgia,serif;font-style:italic;font-size:clamp(140px,27vw,420px);white-space:nowrap;color:rgba(255,77,36,.055);letter-spacing:-.08em;pointer-events:none}
+    .hero-bottom{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+    .hero-copy{font-size:clamp(20px,2vw,32px);line-height:1.2;letter-spacing:-.035em;max-width:850px;margin:0}.hero-copy span{color:#777}
+    .scroll{width:118px;height:118px;border:1px solid var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:9px;line-height:1.25;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.scroll:hover{background:var(--paper);color:var(--ink);transform:rotate(5deg)}
+    .insight{background:var(--paper);color:var(--ink)}
+    .insight .section-label{color:#7b786f}
+    .insight-grid{display:grid;grid-template-columns:.7fr 1.6fr;gap:9vw;align-items:start}
+    .insight p{margin:0;max-width:460px;font-size:19px;line-height:1.5;color:#5f5b54}
+    .insight h2{margin:0;font-size:clamp(58px,8.8vw,142px);line-height:.83;letter-spacing:-.075em;text-transform:uppercase}
+    .insight h2 span{font-family:Georgia,serif;font-style:italic;font-weight:400;color:var(--acid);text-transform:none}
+    .hooks .section-label{margin-bottom:55px}
+    .hook{min-height:62vh;display:flex;align-items:center;border-top:1px solid var(--line);padding:6vw 0;position:relative}
+    .hook-num{position:absolute;top:24px;left:0;color:#666;font-size:10px;letter-spacing:.15em}
+    .hook h3{margin:0;font-size:clamp(50px,8vw,132px);line-height:.88;letter-spacing:-.07em;text-transform:uppercase;max-width:1200px}
+    .hook:nth-of-type(3) h3{max-width:1050px}.hook:nth-of-type(4) h3{max-width:1250px}
+    .hook .tiny{display:block;margin-top:28px;color:#777;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+    .film{background:#111;padding-bottom:0}
+    .film-head{display:flex;justify-content:space-between;gap:35px;align-items:flex-end;margin-bottom:70px}
+    .film-head h2{margin:0;font-size:clamp(60px,9vw,148px);line-height:.79;letter-spacing:-.075em;text-transform:uppercase}
+    .film-head p{margin:0 0 8px;max-width:390px;color:#aaa;font-size:16px;line-height:1.45}
+    .film-stage{display:grid;grid-template-columns:.8fr 1.2fr;gap:5vw;min-height:700px;border-top:1px solid var(--line)}
+    .film-left{padding:52px 0;position:sticky;top:68px;height:max-content}
+    .timecode{font-family:Georgia,serif;font-style:italic;color:var(--acid);font-size:clamp(90px,12vw,180px);line-height:.8;letter-spacing:-.06em}
+    .film-left h3{font-size:35px;margin:25px 0 0;letter-spacing:-.045em}.film-left p{color:#777;max-width:320px;line-height:1.45}
+    .phone-wrap{padding:70px 0 100px;display:flex;justify-content:center}
+    .phone{width:min(460px,100%);background:#ece9e1;color:#111;border-radius:46px;padding:18px;box-shadow:0 30px 90px rgba(0,0,0,.45);align-self:flex-start}
+    .phone-screen{min-height:690px;border-radius:33px;background:#f9f7f1;padding:26px 18px;display:flex;flex-direction:column}
+    .phone-top{text-align:center;font-weight:800;font-size:13px;padding:7px 0 20px;border-bottom:1px solid #ddd8cd}.phone-top small{display:block;font-size:10px;color:#8a857b;margin-top:4px;font-weight:400}
+    .day{font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:#9a958a;text-align:center;margin:34px 0 14px;font-weight:800}
+    .msg{align-self:flex-start;max-width:84%;background:#dfddd7;border-radius:18px 18px 18px 5px;padding:11px 14px;margin:5px 0;font-size:17px;line-height:1.25;opacity:0;transform:translateY(10px) scale(.98);transition:.45s cubic-bezier(.2,.7,.2,1)}
+    .msg.visible{opacity:1;transform:none}.msg.ah{background:#d9d5ca;color:#49453d}
+    .blocked{margin-top:auto;text-align:center;color:#9e1b1b;font-size:12px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;opacity:0;transition:.45s}.blocked.visible{opacity:1}
+    .endcard{min-height:94svh;padding:110px var(--pad);display:flex;flex-direction:column;justify-content:center;background:var(--paper);color:var(--ink)}
+    .endcard h2{font-size:clamp(58px,9.8vw,158px);line-height:.82;letter-spacing:-.075em;margin:0;text-transform:uppercase;max-width:1350px}
+    .endcard h2 span{color:var(--acid)}
+    .endcard .product-line{margin-top:42px;font-size:clamp(18px,1.8vw,28px);letter-spacing:-.025em}
+    .bonus{min-height:85vh;display:flex;flex-direction:column;justify-content:center}
+    .bonus .section-label{margin-bottom:55px}.bonus h2{margin:0;font-size:clamp(52px,8.8vw,145px);line-height:.83;letter-spacing:-.075em;text-transform:uppercase;max-width:1300px}.bonus h2 span{font-family:Georgia,serif;font-weight:400;font-style:italic;color:var(--acid);text-transform:none}
+    .cta{background:var(--acid);color:white;min-height:90svh;display:flex;flex-direction:column;justify-content:center}
+    .cta .section-label{color:rgba(255,255,255,.6)}.cta h2{font-size:clamp(64px,10vw,160px);line-height:.79;letter-spacing:-.08em;text-transform:uppercase;margin:0;max-width:1450px}.cta h2 .italic{font-family:Georgia,serif;font-style:italic;font-weight:400}
+    .offer{margin-top:55px;display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;border-top:1px solid rgba(255,255,255,.45);padding-top:30px}.offer p{font-size:20px;line-height:1.45;margin:0;max-width:560px}.deliverables{list-style:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.4)}.deliverables li{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(255,255,255,.4);padding:14px 0;font-size:13px;text-transform:uppercase;letter-spacing:.08em}.deliverables strong{font-size:17px;letter-spacing:-.03em}
+    .cta-button{margin-top:55px;border:2px solid white;display:flex;align-items:center;justify-content:space-between;padding:24px 28px;font-size:clamp(24px,3vw,48px);font-weight:900;letter-spacing:-.04em;transition:.2s}.cta-button:hover{background:white;color:var(--acid);transform:translateY(-3px)}
+    footer{padding:32px var(--pad) 45px;display:grid;grid-template-columns:1fr 1fr;gap:35px;color:#777;font-size:10px;line-height:1.45;text-transform:uppercase;letter-spacing:.08em}footer .right{text-align:right}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:800px){
+      .topbar{height:62px}.status{display:none}.brand{font-size:15px}
+      section{padding:78px var(--pad)}.hero{padding-top:100px}.hero h1{font-size:clamp(67px,21vw,125px)}.hero h1 .italic{padding-left:8vw}.hero-bottom{grid-template-columns:1fr;align-items:start}.scroll{width:105px;height:105px}
+      .insight-grid{grid-template-columns:1fr;gap:45px}.insight h2{font-size:clamp(52px,14vw,92px)}
+      .hook{min-height:50vh}.hook h3{font-size:clamp(45px,13vw,78px)}
+      .film-head{display:block}.film-head p{margin-top:28px}.film-stage{grid-template-columns:1fr}.film-left{position:relative;top:0;padding-bottom:0}.phone-wrap{padding-top:30px}.phone-screen{min-height:610px}
+      .endcard h2,.bonus h2{font-size:clamp(50px,13vw,87px)}
+      .offer{grid-template-columns:1fr;gap:45px}.cta h2{font-size:clamp(58px,15vw,105px)}
+      footer{grid-template-columns:1fr}.right{text-align:left!important}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.msg,.blocked{opacity:1!important;transform:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="topbar">
+    <div class="brand">WHCBB <i>/</i> WORK <em>×</em> UNBOTTLED</div>
+    <div class="status">CREATIVE STUDY / 01</div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="ghost" aria-hidden="true">mardi.</div>
+      <div class="kicker reveal">UNE IDÉE POUR UNBOTTLED / SEPT. 2026</div>
+      <h1>
+        <span class="reveal">ON A EU</span>
+        <span class="reveal">UNE</span>
+        <span class="italic reveal">idée.</span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-copy reveal">Pas de brief. Pas de réunion.<br><span>Juste une idée qui refusait de nous lâcher.</span></p>
+        <a class="scroll reveal" href="#insight">VOIR<br>L'IDÉE<br>↓</a>
+      </div>
+    </section>
+
+    <section class="insight" id="insight">
+      <div class="section-label reveal">01 / LE POINT DE DÉPART</div>
+      <div class="insight-grid">
+        <p class="reveal">Votre shampoing cheveux gras aide à espacer les lavages. Donc le vrai bénéfice n’est pas seulement ce qui se passe sous la douche. C’est le moment où l’on réalise qu’on n’a pas besoin d’y retourner.</p>
+        <h2 class="reveal">ET SI LE SHAMPOING, LUI, <span>LE PRENAIT PERSONNELLEMENT&nbsp;?</span></h2>
+      </div>
+    </section>
+
+    <section class="hooks">
+      <div class="section-label reveal">02 / TROIS ACCROCHES</div>
+      <article class="hook reveal">
+        <div class="hook-num">01 / DIRECT</div>
+        <h3>IL VOUS ÉCRIT ENCORE.<br>VOUS L’AVEZ UTILISÉ MARDI.</h3>
+      </article>
+      <article class="hook reveal">
+        <div class="hook-num">02 / ESCALADE</div>
+        <h3>MARDI : SHAMPOING.<br>MERCREDI : IL REVIENT À LA CHARGE.<br>JEUDI : BLOQUÉ.</h3>
+      </article>
+      <article class="hook reveal">
+        <div class="hook-num">03 / WHCBB</div>
+        <h3>À CE STADE-LÀ, CE N’EST PLUS UN SHAMPOING.<br>C’EST UNE RELATION TOXIQUE.</h3>
+        <span class="tiny">Espacez les lavages.</span>
+      </article>
+    </section>
+
+    <section class="film">
+      <div class="section-label reveal">03 / FILM SOCIAL — 15 SEC</div>
+      <div class="film-head">
+        <h2 class="reveal">LE SHAMPOING<br>TROP COLLANT.</h2>
+        <p class="reveal">Le produit devient le personnage. Il s’attend à vous revoir le lendemain. Vous, beaucoup moins.</p>
+      </div>
+      <div class="film-stage">
+        <div class="film-left reveal">
+          <div class="timecode">15″</div>
+          <h3>Zéro voix off.</h3>
+          <p>Une salle de bain très « pub beauté ». Le shampoing, lui, vit une rupture beaucoup plus personnelle.</p>
+        </div>
+        <div class="phone-wrap">
+          <div class="phone reveal" id="phone">
+            <div class="phone-screen">
+              <div class="phone-top">SHAMPOING<small>notifications</small></div>
+              <div class="day">MARDI</div>
+              <div class="msg">On remet ça demain ?</div>
+              <div class="day">MERCREDI</div>
+              <div class="msg">J’ai dit un truc ?</div>
+              <div class="msg ah">Ah ok.</div>
+              <div class="day">JEUDI</div>
+              <div class="msg">T’as changé.</div>
+              <div class="blocked">BLOQUÉ.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="endcard">
+      <div class="section-label reveal">04 / END CARD</div>
+      <h2 class="reveal">À CE STADE-LÀ,<br>CE N’EST PLUS UN SHAMPOING.<br><span>C’EST UNE RELATION TOXIQUE.</span></h2>
+      <p class="product-line reveal"><strong>UNBOTTLED</strong> — Espacez les lavages.</p>
+    </section>
+
+    <section class="bonus">
+      <div class="section-label reveal">05 / ET PUIS IL Y AVAIT CETTE AUTRE IDÉE.</div>
+      <h2 class="reveal">VOS CHEVEUX NE VONT PAS SAUVER LA PLANÈTE.<br><span>ILS PEUVENT DÉJÀ ARRÊTER DE GRAISSER MERCREDI.</span></h2>
+    </section>
+
+    <section class="cta">
+      <div class="section-label reveal">06 / SI ÇA VOUS PARLE</div>
+      <h2 class="reveal">ON EN A<br><span class="italic">ENCORE SEPT.</span></h2>
+      <div class="offer">
+        <p class="reveal">Le <strong>WHCBB €99 AD FIX</strong> prend un produit et le pousse jusqu’à avoir assez de matière pour un vrai test créatif. Pas de retainer. Pas de « discovery circus ». Juste le boulot.</p>
+        <ul class="deliverables reveal">
+          <li><span>Nouvelles accroches</span><strong>10</strong></li>
+          <li><span>Ads complètes</span><strong>3</strong></li>
+          <li><span>Directions créatives</span><strong>2</strong></li>
+          <li><span>Script vidéo</span><strong>1</strong></li>
+          <li><span>Livraison</span><strong>24H</strong></li>
+        </ul>
+      </div>
+      <a class="cta-button reveal" href="mailto:hello@whcbb.work?subject=OK%20—%20continuez&body=Bonjour%20WHCBB%2C%0A%0AJ%E2%80%99ai%20vu%20le%20concept%20Unbottled.%20Continuons.%0A">
+        <span>OK. CONTINUEZ.</span><span>↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div>WHCBB / WORK — MAKE THE AD WORK.<br>hello@whcbb.work</div>
+    <div class="right">Étude créative spéculative indépendante.<br>Non commandée, non affiliée et non approuvée par Unbottled.</div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const ro = new IntersectionObserver(entries => entries.forEach(entry => {
+      if(entry.isIntersecting){ entry.target.classList.add('visible'); ro.unobserve(entry.target); }
+    }), {threshold:.12});
+    reveals.forEach((el,i) => { el.style.transitionDelay = `${Math.min((i%3)*65,130)}ms`; ro.observe(el); });
+
+    const phone = document.getElementById('phone');
+    const messages = [...phone.querySelectorAll('.msg')];
+    const blocked = phone.querySelector('.blocked');
+    let played = false;
+    const po = new IntersectionObserver(entries => entries.forEach(entry => {
+      if(entry.isIntersecting && !played){
+        played = true;
+        messages.forEach((m,i) => setTimeout(() => m.classList.add('visible'), 450 + i*850));
+        setTimeout(() => blocked.classList.add('visible'), 450 + messages.length*850);
+      }
+    }), {threshold:.45});
+    po.observe(phone);
+
+    const progress = document.querySelector('.progress span');
+    let ticking=false;
+    function onScroll(){
+      if(ticking) return; ticking=true;
+      requestAnimationFrame(() => {
+        const h=document.documentElement.scrollHeight-window.innerHeight;
+        progress.style.width=`${h>0 ? Math.min(100,(window.scrollY/h)*100):0}%`;
+        ticking=false;
+      });
+    }
+    window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  </script>
+</body>
+</html>
