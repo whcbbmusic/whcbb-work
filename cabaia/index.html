@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <meta name="description" content="WHCBB / WORK × CABAIA — étude créative spéculative." />
+  <title>WHCBB / WORK × CABAIA — ÇA COMMENCE À SE VOIR</title>
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --paper:#f2eee4;
+      --ink:#0b0b0b;
+      --muted:#8b877f;
+      --line:rgba(242,238,228,.16);
+      --orange:#ff522d;
+      --signal:#f3df2b;
+      --pad:clamp(20px,3.2vw,54px);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--paper);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    ::selection{background:var(--orange);color:#fff}
+    .grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.055;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}
+    .progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:1002}.progress span{display:block;height:100%;width:0;background:var(--orange)}
+    .topbar{position:fixed;z-index:100;top:0;left:0;right:0;height:68px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(11,11,11,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .brand{font-weight:900;letter-spacing:-.04em;font-size:17px}.brand i{font-style:normal;color:var(--orange);font-weight:400;margin:0 .35em}.brand em{font-style:normal;color:#777;font-weight:400;margin:0 .55em}
+    .status{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#777;font-weight:800}
+    section{position:relative;border-bottom:1px solid var(--line);padding:110px var(--pad)}
+    .kicker,.section-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#777}
+    .hero{min-height:100svh;padding-top:115px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+    .hero:before{content:"LIGNE 01";position:absolute;right:-2vw;top:18%;font-weight:900;font-size:clamp(120px,25vw,390px);letter-spacing:-.09em;color:rgba(255,82,45,.045);transform:rotate(-8deg);white-space:nowrap}
+    .hero h1{margin:4vh 0 0;font-size:clamp(68px,13.2vw,210px);line-height:.79;letter-spacing:-.083em;text-transform:uppercase;font-weight:900;position:relative;z-index:2;max-width:1500px}
+    .hero h1 span{display:block}.hero h1 .italic{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;text-transform:none;color:var(--orange);padding-left:16vw}
+    .hero-bottom{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+    .hero-copy{font-size:clamp(20px,2vw,32px);line-height:1.2;letter-spacing:-.035em;max-width:850px;margin:0}.hero-copy span{color:#777}
+    .scroll{width:118px;height:118px;border:1px solid var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:9px;line-height:1.25;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.scroll:hover{background:var(--paper);color:var(--ink);transform:rotate(5deg)}
+
+    .insight{background:var(--paper);color:var(--ink)}
+    .insight .section-label{color:#7b786f}
+    .insight-grid{display:grid;grid-template-columns:minmax(270px,.68fr) minmax(0,1.32fr);gap:clamp(45px,7vw,120px);align-items:start}
+    .insight p{margin:0;max-width:34ch;font-size:clamp(18px,1.35vw,24px);line-height:1.46;color:#5f5b54;letter-spacing:-.02em}.insight p strong{color:var(--ink);font-weight:800}
+    .insight h2{margin:0;font-size:clamp(52px,6.4vw,116px);line-height:.86;letter-spacing:-.07em;text-transform:uppercase}.insight h2 span{display:block;color:var(--orange)}
+    .route{margin-top:70px;border-top:3px solid var(--ink);padding-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .route div{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#6f6a61}.route strong{display:block;color:var(--ink);font-size:13px;margin-bottom:8px}
+
+    .hooks{padding-bottom:40px}.hooks .section-label{margin-bottom:54px}
+    .hook{min-height:58vh;display:flex;align-items:center;border-top:1px solid var(--line);padding:6vw 0;position:relative}.hook:first-of-type{border-top:0}
+    .hook-num{position:absolute;top:24px;left:0;color:#666;font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+    .hook h3{margin:0;font-size:clamp(48px,7.6vw,126px);line-height:.88;letter-spacing:-.068em;text-transform:uppercase;max-width:1280px}.hook .payoff{display:block;color:var(--orange)}
+    .hook .tiny{display:block;margin-top:28px;color:#777;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+    .hook .whisper{font-family:Georgia,serif;font-style:italic;text-transform:none;font-weight:400;color:#aaa}
+
+    .film{background:#141414;padding-bottom:0}
+    .film-head{display:flex;justify-content:space-between;gap:35px;align-items:flex-end;margin-bottom:65px}.film-head h2{margin:0;font-size:clamp(60px,9vw,145px);line-height:.8;letter-spacing:-.075em;text-transform:uppercase}.film-head h2 span{color:var(--orange)}.film-head p{margin:0 0 8px;max-width:420px;color:#aaa;font-size:16px;line-height:1.45}
+    .storyboard{border-top:1px solid var(--line)}
+    .shot{display:grid;grid-template-columns:120px 1fr .7fr;gap:35px;padding:34px 0;border-bottom:1px solid var(--line);align-items:start}
+    .tc{font-family:Georgia,serif;font-style:italic;color:var(--orange);font-size:30px;letter-spacing:-.03em}.shot h3{margin:0 0 10px;font-size:clamp(22px,2.2vw,34px);letter-spacing:-.035em}.shot p{margin:0;color:#a7a39c;font-size:15px;line-height:1.5}.shot .sound{font-size:13px;color:#777;text-transform:uppercase;letter-spacing:.08em;line-height:1.55}
+    .nod{background:var(--paper);color:var(--ink);padding:70px var(--pad);display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;align-items:start}.nod .section-label{color:#777}.nod blockquote{margin:0;font-family:Georgia,serif;font-style:italic;font-size:clamp(34px,4.2vw,70px);line-height:1.03;letter-spacing:-.04em}.nod blockquote strong{font-family:Arial,Helvetica,sans-serif;font-style:normal;text-transform:uppercase;color:var(--orange)}
+
+    .endcard{min-height:88svh;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;justify-content:center}.endcard h2{font-size:clamp(58px,9.4vw,156px);line-height:.82;letter-spacing:-.075em;margin:0;text-transform:uppercase;max-width:1380px}.endcard h2 .payoff{color:var(--orange)}.endcard .product-line{margin-top:38px;font-size:clamp(18px,1.7vw,28px);letter-spacing:-.02em}
+
+    .reserve{min-height:72vh;display:flex;flex-direction:column;justify-content:center}.reserve h2{margin:25px 0 0;font-size:clamp(52px,8vw,132px);line-height:.86;letter-spacing:-.07em;text-transform:uppercase;max-width:1280px}.reserve h2 span{color:var(--orange)}.reserve p{margin:35px 0 0;max-width:650px;color:#888;font-size:17px;line-height:1.45}
+
+    .cta{background:var(--orange);color:#fff;min-height:90svh;display:flex;flex-direction:column;justify-content:center}.cta .section-label{color:rgba(255,255,255,.64)}.cta h2{font-size:clamp(62px,9.5vw,156px);line-height:.79;letter-spacing:-.08em;text-transform:uppercase;margin:0;max-width:1450px}.cta h2 .italic{font-family:Georgia,serif;font-style:italic;font-weight:400;text-transform:none}.offer{margin-top:55px;display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;border-top:1px solid rgba(255,255,255,.45);padding-top:30px}.offer p{font-size:20px;line-height:1.45;margin:0;max-width:560px}.deliverables{list-style:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.4)}.deliverables li{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(255,255,255,.4);padding:14px 0;font-size:13px;text-transform:uppercase;letter-spacing:.08em}.deliverables strong{font-size:17px;letter-spacing:-.03em}.cta-button{margin-top:55px;border:2px solid #fff;display:flex;align-items:center;justify-content:space-between;padding:24px 28px;font-size:clamp(23px,3vw,46px);font-weight:900;letter-spacing:-.04em;transition:.2s}.cta-button:hover{background:#fff;color:var(--orange);transform:translateY(-3px)}
+    footer{padding:32px var(--pad) 45px;display:grid;grid-template-columns:1fr 1fr;gap:35px;color:#777;font-size:10px;line-height:1.45;text-transform:uppercase;letter-spacing:.08em}footer .right{text-align:right}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:800px){
+      .topbar{height:62px}.status{display:none}.brand{font-size:15px}section{padding:78px var(--pad)}.hero{padding-top:100px}.hero h1{font-size:clamp(63px,20vw,120px)}.hero h1 .italic{padding-left:6vw}.hero-bottom{grid-template-columns:1fr}.scroll{width:104px;height:104px}.insight-grid{grid-template-columns:1fr;gap:45px}.route{grid-template-columns:1fr 1fr}.hook{min-height:47vh}.hook h3{font-size:clamp(43px,12.5vw,78px)}.film-head{display:block}.film-head p{margin-top:25px}.shot{grid-template-columns:72px 1fr}.shot .sound{grid-column:2}.nod{grid-template-columns:1fr;gap:30px}.offer{grid-template-columns:1fr;gap:45px}.cta h2{font-size:clamp(56px,14vw,100px)}footer{grid-template-columns:1fr}.right{text-align:left!important}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="topbar">
+    <div class="brand">WHCBB <i>/</i> WORK <em>×</em> CABAIA</div>
+    <div class="status">CREATIVE STUDY / 02</div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="kicker reveal">UNE IDÉE POUR CABAIA / SEPT. 2026</div>
+      <h1>
+        <span class="reveal">ON A</span>
+        <span class="reveal">REMARQUÉ</span>
+        <span class="italic reveal">un petit problème.</span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-copy reveal">Vous avez réussi à rendre votre sac immédiatement reconnaissable.<br><span>Le problème, c’est que maintenant, on le reconnaît partout.</span></p>
+        <a class="scroll reveal" href="#insight">VOIR<br>L'IDÉE<br>↓</a>
+      </div>
+    </section>
+
+    <section class="insight" id="insight">
+      <div class="section-label reveal">01 / LE POINT DE DÉPART</div>
+      <div class="insight-grid">
+        <p class="reveal">CABAIA a réussi un truc assez rare : <strong>devenir immédiatement reconnaissable.</strong><br><br>Alors plutôt que de cacher l’effet secondaire du succès, on s’est dit qu’il fallait en rire.</p>
+        <h2 class="reveal">LE SUCCÈS<br>A CRÉÉ<br><span>DE LA RESSEMBLANCE.</span></h2>
+      </div>
+      <div class="route reveal" aria-label="territoire créatif">
+        <div><strong>01</strong>SUCCÈS</div>
+        <div><strong>02</strong>UBIQUITÉ</div>
+        <div><strong>03</strong>PETIT MALAISE SOCIAL</div>
+        <div><strong>04</strong>PERSONNALISATION</div>
+      </div>
+    </section>
+
+    <section class="hooks">
+      <div class="section-label reveal">02 / CINQ EXÉCUTIONS</div>
+
+      <article class="hook reveal">
+        <div class="hook-num">01 / LE MÉTRO</div>
+        <h3>VOUS AVEZ CROISÉ VOTRE SAC<br>DANS LE MÉTRO.<span class="payoff">TROIS FOIS.</span><span class="tiny">CHANGEZ DE POCHETTE.</span></h3>
+      </article>
+
+      <article class="hook reveal">
+        <div class="hook-num">02 / LA PREUVE SOCIALE, MALHEUREUSEMENT</div>
+        <h3>UN FRANÇAIS SUR CINQ<br>A DÉJÀ ACHETÉ DU CABAIA.<span class="payoff">ÇA COMMENCE À<br>SE VOIR.</span><span class="tiny">CHANGEZ DE POCHETTE.</span></h3>
+      </article>
+
+      <article class="hook reveal">
+        <div class="hook-num">03 / CRISE NATIONALE</div>
+        <h3>UN FRANÇAIS SUR CINQ<br>A DÉJÀ ACHETÉ DU CABAIA.<br>À CE STADE-LÀ,<br>CE N’EST PLUS UNE TENDANCE.<span class="payoff">C’EST UN RECENSEMENT.</span><span class="tiny">POCHETTES INTERCHANGEABLES CABAIA.</span></h3>
+      </article>
+
+      <article class="hook reveal">
+        <div class="hook-num">04 / LE BUREAU</div>
+        <h3>VOUS ÊTES ARRIVÉ<br>AVEC LE MÊME SAC<br>QUE VOTRE COLLÈGUE.<span class="payoff">ET SON STAGIAIRE.</span><span class="tiny">CHANGEZ DE POCHETTE.</span></h3>
+      </article>
+
+      <article class="hook reveal">
+        <div class="hook-num">05 / CULTE</div>
+        <h3>LE SAC EST DEVENU CULTE.<span class="payoff">PEUT-ÊTRE UN PEU<br>TROP LITTÉRALEMENT.</span><span class="tiny">CHANGEZ DE POCHETTE.</span></h3>
+      </article>
+    </section>
+
+    <section class="film">
+      <div class="film-head reveal">
+        <h2>FILM 15″<br><span>LE MÉTRO</span></h2>
+        <p>Pas de dialogue. Pas de musique. Juste le métro, trois sacs identiques et un minuscule signe de tête qui change tout.</p>
+      </div>
+
+      <div class="storyboard">
+        <article class="shot reveal">
+          <div class="tc">00–02</div>
+          <div><h3>Rien à signaler.</h3><p>Matin. Métro légèrement gris. Une femme s’assoit, sac CABAIA sur les genoux. Un trajet parfaitement ordinaire.</p></div>
+          <div class="sound">Portes. Rame. Ambiance réelle. Aucun morceau.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">02–04</div>
+          <div><h3>Le premier.</h3><p>Elle lève les yeux. En face : quelqu’un avec exactement le même sac. Elle regarde le sien. Puis le leur. Rien de dramatique.</p></div>
+          <div class="sound">Roule­ment de la rame. Silence.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">04–06</div>
+          <div><h3>Le deuxième.</h3><p>Les portes s’ouvrent. Un passager entre. Même sac. Il se place à côté du premier.</p></div>
+          <div class="sound">Bip des portes. Pas. Tissu.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">06–08</div>
+          <div><h3>Le troisième. Et le signe.</h3><p>Plus loin dans la rame : un troisième sac identique. Son propriétaire remarque le sien. Leurs regards se croisent. Il lui adresse le plus petit signe de tête possible.</p></div>
+          <div class="sound">Rien. Surtout rien.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">08–10</div>
+          <div><h3>La réalisation.</h3><p>Gros plan. Sac. Sac. Sac. Son sac. Elle comprend qu’elle a peut-être rejoint quelque chose sans le savoir.</p></div>
+          <div class="sound">Rame. Un souffle de ventilation.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">10–12</div>
+          <div><h3>Le lendemain.</h3><p>Même métro. Même sac — mais une pochette avant complètement différente. L’homme d’hier la voit. Regarde la pochette. Regarde son visage.</p></div>
+          <div class="sound">Portes qui se ferment.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">12–13</div>
+          <div><h3>Pas de signe.</h3><p>Cette fois, il ne hoche pas la tête. Elle s’assoit. Infime satisfaction. Elle est sortie.</p></div>
+          <div class="sound">Silence.</div>
+        </article>
+        <article class="shot reveal">
+          <div class="tc">13–15</div>
+          <div><h3>Carton.</h3><p><strong>VOUS AVEZ CROISÉ VOTRE SAC DANS LE MÉTRO. TROIS FOIS.</strong><br><br><strong style="color:var(--orange)">CHANGEZ DE POCHETTE.</strong></p></div>
+          <div class="sound">Un dernier bip de métro. Cut.</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="nod">
+      <div class="section-label reveal">NOTE DE RÉALISATION / LE SIGNE</div>
+      <blockquote class="reveal">Le troisième propriétaire remarque qu’ils ont le même sac. Il lui adresse un très léger signe de tête. <strong>Comme s’ils se reconnaissaient.</strong> Elle réalise qu’elle a peut-être rejoint quelque chose sans le savoir.</blockquote>
+    </section>
+
+    <section class="endcard">
+      <div class="section-label reveal">03 / LE CARTON</div>
+      <h2 class="reveal">VOUS AVEZ CROISÉ<br>VOTRE SAC DANS LE MÉTRO.<span class="payoff">TROIS FOIS.</span></h2>
+      <div class="product-line reveal"><strong>CHANGEZ DE POCHETTE.</strong> &nbsp; CABAIA.</div>
+    </section>
+
+    <section class="reserve">
+      <div class="section-label reveal">04 / ON GARDE CELLE-CI DANS LA POCHE</div>
+      <h2 class="reveal">TOUT LE MONDE A<br>LE MÊME SAC.<span>SAUVEZ AU MOINS<br>VOTRE DIGNITÉ.</span></h2>
+      <p class="reveal">On ne met pas forcément tout sur l’affiche. Mais on aime bien savoir qu’on pourrait.</p>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="section-label reveal">05 / SI ÇA VOUS PARLE</div>
+      <h2 class="reveal">ON EN A<br><span class="italic">d’autres.</span></h2>
+      <div class="offer reveal">
+        <p>Notre <strong>Ad Fix à 99 €</strong> transforme une observation de ce genre en matière créative exploitable. Un produit. Une journée. Pas de retainer.</p>
+        <ul class="deliverables">
+          <li><span>Accroches</span><strong>10</strong></li>
+          <li><span>Ads complètes</span><strong>3</strong></li>
+          <li><span>Directions créatives</span><strong>2</strong></li>
+          <li><span>Script vidéo</span><strong>1</strong></li>
+          <li><span>Turnaround</span><strong>24H</strong></li>
+        </ul>
+      </div>
+      <a class="cta-button reveal" href="mailto:hello@whcbb.work?subject=CABAIA%20%C3%97%20WHCBB%20%2F%20WORK"><span>HELLO@WHCBB.WORK</span><span>↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <div>WHCBB / WORK — MAKE THE AD WORK.<br>HELLO@WHCBB.WORK</div>
+    <div class="right">ÉTUDE CRÉATIVE SPÉCULATIVE ET INDÉPENDANTE.<br>NON COMMANDÉE, NON AFFILIÉE ET NON ENDOSSÉE PAR CABAIA.</div>
+  </footer>
+
+  <script>
+    const progress = document.querySelector('.progress span');
+    const updateProgress = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      progress.style.width = (max > 0 ? (scrollY / max) * 100 : 0) + '%';
+    };
+    addEventListener('scroll', updateProgress, {passive:true});
+    updateProgress();
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12, rootMargin:'0px 0px -6% 0px'});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
