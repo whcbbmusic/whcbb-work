@@ -1,199 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta name="description" content="WHCBB / WORK — Performance creative for products worth noticing. Make the ad work." />
-  <meta property="og:title" content="WHCBB / WORK — MAKE THE AD WORK" />
-  <meta property="og:description" content="Hooks, copy, concepts and scripts built to earn the next second." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://whcbb.work/" />
-  <title>WHCBB / WORK — MAKE THE AD WORK</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="theme-color" content="#f6a7d8">
+<meta name="description" content="WHCBB / WORK × PerfectTed — speculative creative study.">
+<title>WHCBB / WORK × PerfectTed — MATCHA BECAME A PERSONALITY</title>
+<style>
+:root{--pink:#f6a7d8;--cream:#fff8ef;--ink:#161616;--matcha:#b9d36a;--lilac:#c9b7ff;--line:rgba(22,22,22,.18);--pad:clamp(20px,3.2vw,54px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit;text-decoration:none}::selection{background:var(--ink);color:var(--pink)}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitchTiles'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E")}.progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:1002}.progress span{display:block;height:100%;width:0;background:var(--ink)}
+.topbar{position:fixed;z-index:100;top:0;left:0;right:0;height:68px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(255,248,239,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.brand{font-weight:900;letter-spacing:-.04em;font-size:17px}.brand i{font-style:normal;color:var(--pink);font-weight:400;margin:0 .35em}.brand em{font-style:normal;color:#8c847c;font-weight:400;margin:0 .55em}.status{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7c746d;font-weight:800}
+section{position:relative;border-bottom:1px solid var(--line);padding:110px var(--pad)}.kicker,.section-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:#776f68}
+.hero{min-height:100svh;padding-top:115px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(135deg,var(--pink) 0 63%,var(--lilac) 63% 100%);overflow:hidden}.hero:before{content:"MATCHA";position:absolute;right:-4vw;top:14%;font-weight:900;font-size:clamp(140px,27vw,430px);letter-spacing:-.09em;color:rgba(22,22,22,.06);transform:rotate(-7deg);white-space:nowrap}.hero h1{margin:4vh 0 0;font-size:clamp(66px,12.3vw,196px);line-height:.79;letter-spacing:-.085em;text-transform:uppercase;font-weight:900;position:relative;z-index:2;max-width:1500px}.hero h1 span{display:block}.hero h1 .serif{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-weight:400;text-transform:none;padding-left:14vw;letter-spacing:-.06em}.hero-bottom{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}.hero-copy{font-size:clamp(20px,2vw,32px);line-height:1.2;letter-spacing:-.035em;max-width:820px;margin:0}.hero-copy span{color:rgba(22,22,22,.58)}.scroll{width:118px;height:118px;border:1px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;text-align:center;font-size:9px;line-height:1.25;letter-spacing:.16em;text-transform:uppercase;transition:.25s}.scroll:hover{background:var(--ink);color:var(--cream);transform:rotate(5deg)}
+.insight{background:var(--cream)}.insight-grid{display:grid;grid-template-columns:minmax(270px,.7fr) minmax(0,1.3fr);gap:clamp(45px,7vw,120px);align-items:start}.insight p{margin:0;max-width:36ch;font-size:clamp(18px,1.35vw,24px);line-height:1.46;color:#635d57;letter-spacing:-.02em}.insight p strong{color:var(--ink)}.insight h2{margin:0;font-size:clamp(52px,6.4vw,116px);line-height:.86;letter-spacing:-.07em;text-transform:uppercase}.insight h2 span{display:block;color:#7c5bd6}.route{margin-top:70px;border-top:3px solid var(--ink);padding-top:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.route div{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#716961}.route strong{display:block;color:var(--ink);font-size:13px;margin-bottom:8px}
+.hooks{background:var(--ink);color:var(--cream);padding-bottom:40px}.hooks .section-label{margin-bottom:54px;color:#8f8a84}.hook{min-height:58vh;display:flex;align-items:center;border-top:1px solid rgba(255,255,255,.15);padding:6vw 0;position:relative}.hook:first-of-type{border-top:0}.hook-num{position:absolute;top:24px;left:0;color:#8b8680;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.hook h3{margin:0;font-size:clamp(48px,7.4vw,122px);line-height:.88;letter-spacing:-.068em;text-transform:uppercase;max-width:1320px}.hook .payoff{display:block;color:var(--pink)}.hook .tiny{display:block;margin-top:28px;color:#9e9891;font-size:13px;letter-spacing:.12em;text-transform:uppercase}.hook .soft{font-family:Georgia,serif;font-style:italic;text-transform:none;font-weight:400;color:var(--matcha)}
+.film{background:var(--pink);padding-bottom:0}.film-head{display:flex;justify-content:space-between;gap:35px;align-items:flex-end;margin-bottom:65px}.film-head h2{margin:0;font-size:clamp(58px,8.7vw,142px);line-height:.81;letter-spacing:-.075em;text-transform:uppercase}.film-head h2 span{color:var(--cream)}.film-head p{margin:0 0 8px;max-width:430px;color:rgba(22,22,22,.67);font-size:16px;line-height:1.45}.storyboard{border-top:1px solid rgba(22,22,22,.22)}.shot{display:grid;grid-template-columns:120px 1fr .7fr;gap:35px;padding:34px 0;border-bottom:1px solid rgba(22,22,22,.22);align-items:start}.tc{font-family:Georgia,serif;font-style:italic;color:var(--cream);font-size:30px;letter-spacing:-.03em}.shot h3{margin:0 0 10px;font-size:clamp(22px,2.2vw,34px);letter-spacing:-.035em}.shot p{margin:0;color:rgba(22,22,22,.75);font-size:15px;line-height:1.5}.shot .sound{font-size:13px;color:rgba(22,22,22,.58);text-transform:uppercase;letter-spacing:.08em;line-height:1.55}
+.director{background:var(--matcha);padding:74px var(--pad);display:grid;grid-template-columns:.7fr 1.3fr;gap:5vw;align-items:start}.director blockquote{margin:0;font-family:Georgia,serif;font-style:italic;font-size:clamp(34px,4.2vw,70px);line-height:1.03;letter-spacing:-.04em}.director blockquote strong{font-family:Arial,Helvetica,sans-serif;font-style:normal;text-transform:uppercase}
+.endcard{min-height:88svh;background:var(--cream);display:flex;flex-direction:column;justify-content:center}.endcard h2{font-size:clamp(58px,9.2vw,152px);line-height:.82;letter-spacing:-.075em;margin:0;text-transform:uppercase;max-width:1380px}.endcard h2 .payoff{color:#7c5bd6}.endcard .product-line{margin-top:38px;font-size:clamp(18px,1.7vw,28px);letter-spacing:-.02em}
+.reserve{min-height:70vh;background:var(--lilac);display:flex;flex-direction:column;justify-content:center}.reserve h2{margin:25px 0 0;font-size:clamp(52px,8vw,132px);line-height:.86;letter-spacing:-.07em;text-transform:uppercase;max-width:1280px}.reserve h2 span{color:var(--cream)}.reserve p{margin:35px 0 0;max-width:650px;color:rgba(22,22,22,.66);font-size:17px;line-height:1.45}
+.cta{background:var(--ink);color:var(--cream);min-height:90svh;display:flex;flex-direction:column;justify-content:center}.cta .section-label{color:#8e8983}.cta h2{font-size:clamp(62px,9.5vw,156px);line-height:.79;letter-spacing:-.08em;text-transform:uppercase;margin:0;max-width:1450px}.cta h2 .italic{font-family:Georgia,serif;font-style:italic;font-weight:400;text-transform:none;color:var(--pink)}.offer{margin-top:55px;display:grid;grid-template-columns:1.1fr .9fr;gap:7vw;border-top:1px solid rgba(255,255,255,.22);padding-top:30px}.offer p{font-size:20px;line-height:1.45;margin:0;max-width:560px;color:#c5c0ba}.deliverables{list-style:none;padding:0;margin:0;border-top:1px solid rgba(255,255,255,.2)}.deliverables li{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(255,255,255,.2);padding:14px 0;font-size:13px;text-transform:uppercase;letter-spacing:.08em}.deliverables strong{font-size:17px;letter-spacing:-.03em}.cta-button{margin-top:55px;border:2px solid var(--cream);display:flex;align-items:center;justify-content:space-between;padding:24px 28px;font-size:clamp(23px,3vw,46px);font-weight:900;letter-spacing:-.04em;transition:.2s}.cta-button:hover{background:var(--pink);color:var(--ink);border-color:var(--pink);transform:translateY(-3px)}
+footer{padding:32px var(--pad) 45px;display:grid;grid-template-columns:1fr 1fr;gap:35px;color:#777;font-size:10px;line-height:1.45;text-transform:uppercase;letter-spacing:.08em;background:var(--cream)}footer .right{text-align:right}.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.2,.7,.2,1),transform .75s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.topbar{height:62px}.status{display:none}.brand{font-size:15px}section{padding:78px var(--pad)}.hero{padding-top:100px}.hero h1{font-size:clamp(58px,18.5vw,110px)}.hero h1 .serif{padding-left:5vw}.hero-bottom{grid-template-columns:1fr}.scroll{width:104px;height:104px}.insight-grid{grid-template-columns:1fr;gap:45px}.insight h2{font-size:clamp(44px,11vw,70px);letter-spacing:-.075em}.route{grid-template-columns:1fr 1fr}.hook{min-height:auto;display:block;padding:64px 0 56px}.hook-num{position:static;display:block;margin-bottom:28px}.hook h3{font-size:clamp(42px,12vw,75px)}.film-head{display:block}.film-head p{margin-top:25px}.shot{grid-template-columns:72px 1fr}.shot .sound{grid-column:2}.director{grid-template-columns:1fr;gap:30px}.offer{grid-template-columns:1fr;gap:45px}.cta h2{font-size:clamp(56px,14vw,100px)}footer{grid-template-columns:1fr}.right{text-align:left!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
 </head>
-
 <body>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="progress" aria-hidden="true"><span></span></div>
-
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="WHCBB Work home">
-      <span>WHCBB</span><i>/</i><span>WORK</span>
-    </a>
-    <nav aria-label="Primary navigation">
-      <a href="#fix">The Fix</a>
-      <a href="#proof">Why us</a>
-      <a class="nav-cta" href="mailto:hello@whcbb.work?subject=Fix%20my%20ad">Fix my ad ↗</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="dolly-word" aria-hidden="true">WORK</div>
-
-      <div class="hero-kicker reveal">PERFORMANCE CREATIVE / FR + EN</div>
-
-      <h1 class="hero-title">
-        <span class="line reveal">MAKE</span>
-        <span class="line reveal">THE AD</span>
-        <span class="line reveal italic">WORK.</span>
-      </h1>
-
-      <div class="hero-bottom">
-        <p class="hero-copy reveal">
-          Your product does not need more content.<br />
-          It needs a better reason to stop scrolling.
-        </p>
-
-        <a class="round-cta reveal" href="#fix" aria-label="See the ninety-nine euro ad fix">
-          <span>SEE THE<br />€99 FIX</span>
-          <b>↓</b>
-        </a>
-      </div>
-
-      <div class="scroll-cue" aria-hidden="true">
-        <span>SCROLL</span><i></i>
-      </div>
-    </section>
-
-    <section class="manifesto">
-      <div class="section-label">01 / THE PROBLEM</div>
-      <div class="manifesto-copy">
-        <p class="big-copy reveal">
-          GOOD PRODUCT.<br />
-          <span class="muted">BAD FIRST THREE SECONDS.</span>
-        </p>
-        <p class="side-copy reveal">
-          Most ads do not need a reinvention. They need a sharper hook, a clearer angle,
-          a reason to care now — and somebody who understands what happens after the click.
-        </p>
-      </div>
-    </section>
-
-    <section class="demo" id="proof">
-      <div class="section-label">02 / SHOW, DON'T PITCH</div>
-
-      <div class="demo-shell reveal">
-        <div class="demo-top">
-          <span>ONE PRODUCT. THREE OPENINGS.</span>
-          <div class="demo-tabs" role="tablist" aria-label="Ad rewrite demo">
-            <button class="demo-tab active" data-mode="boring" role="tab" aria-selected="true">BORING</button>
-            <button class="demo-tab" data-mode="better" role="tab" aria-selected="false">BETTER</button>
-            <button class="demo-tab" data-mode="whcbb" role="tab" aria-selected="false">WHCBB</button>
-          </div>
-        </div>
-
-        <div class="demo-stage">
-          <p class="demo-eyebrow" id="demoEyebrow">SKINCARE / PAID SOCIAL</p>
-          <h2 id="demoHeadline">Introducing our new daily moisturiser.</h2>
-          <p id="demoBody">Made with carefully selected ingredients for hydrated, healthy-looking skin.</p>
-        </div>
-
-        <div class="demo-note">
-          <span id="demoNote">Technically fine. Commercially invisible.</span>
-          <span>↗</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="offer" id="fix">
-      <div class="section-label">03 / THE FIX</div>
-
-      <div class="offer-grid">
-        <div class="offer-left">
-          <p class="offer-kicker reveal">24-HOUR CREATIVE RESCUE</p>
-          <h2 class="reveal">
-            THE<br />
-            <span>€99</span><br />
-            AD FIX.
-          </h2>
-          <p class="offer-desc reveal">
-            Send one product and the ads you are already running.
-            Get a focused creative pack built to give your next test a better shot.
-          </p>
-        </div>
-
-        <div class="offer-right reveal">
-          <div class="deliverable"><span>01</span><strong>10</strong><p>new hooks</p></div>
-          <div class="deliverable"><span>02</span><strong>3</strong><p>full ad rewrites</p></div>
-          <div class="deliverable"><span>03</span><strong>2</strong><p>creative directions</p></div>
-          <div class="deliverable"><span>04</span><strong>1</strong><p>short-form video script</p></div>
-          <div class="deliverable wide"><span>05</span><strong>24H</strong><p>turnaround</p></div>
-        </div>
-      </div>
-
-      <div class="offer-strip reveal">
-        <span>NO RETAINER.</span>
-        <span>NO DISCOVERY CIRCUS.</span>
-        <span>ONE PRODUCT. ONE FIX.</span>
-      </div>
-    </section>
-
-    <section class="method">
-      <div class="section-label">04 / HOW IT WORKS</div>
-      <div class="steps">
-        <article class="step reveal">
-          <span>01</span>
-          <h3>SHOW US THE AD.</h3>
-          <p>Send the product, landing page and whatever is currently running.</p>
-        </article>
-        <article class="step reveal">
-          <span>02</span>
-          <h3>WE FIND THE LEAK.</h3>
-          <p>Hook, angle, promise, pacing, offer or message-market mismatch.</p>
-        </article>
-        <article class="step reveal">
-          <span>03</span>
-          <h3>YOU GET THE FIX.</h3>
-          <p>A concise creative pack designed to be tested, not admired in a meeting.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cred">
-      <div class="section-label">05 / WHO'S BEHIND IT</div>
-      <div class="cred-grid">
-        <p class="big-copy reveal">
-          CREATIVE<br />
-          <span class="muted">WITH MEDIA-BUYING SCARS.</span>
-        </p>
-        <div class="cred-copy reveal">
-          <p>
-            WHCBB / WORK sits where creative direction meets performance marketing:
-            hooks, angles, copy and concepts shaped by what people actually click,
-            watch and buy.
-          </p>
-          <ul>
-            <li>Paid social + performance creative</li>
-            <li>Meta / Google / TikTok / YouTube / Native</li>
-            <li>French + English</li>
-            <li>Human judgement, AI-assisted speed</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing">
-      <div class="closing-word" aria-hidden="true">MAKE IT WORK.</div>
-      <p class="section-label">06 / YOUR MOVE</p>
-      <h2 class="reveal">SEND THE AD.<br /><span>WE'LL TAKE A SWING.</span></h2>
-      <p class="closing-copy reveal">
-        One product. €99. Delivered in 24 hours.
-      </p>
-      <a class="mega-cta reveal" href="mailto:hello@whcbb.work?subject=Fix%20my%20ad&body=Product%3A%0AWebsite%3A%0AAd%20link%3A%0AWhat%20I%20want%20to%20improve%3A">
-        <span>FIX MY AD</span><b>↗</b>
-      </a>
-    </section>
-  </main>
-
-  <footer>
-    <a class="brand" href="#top"><span>WHCBB</span><i>/</i><span>WORK</span></a>
-    <p>MAKE THE AD WORK.</p>
-    <a href="mailto:hello@whcbb.work">hello@whcbb.work</a>
-    <p class="copyright">© <span id="year"></span> WHCBB / WORK</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<div class="grain" aria-hidden="true"></div><div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="brand">WHCBB <i>/</i> WORK <em>×</em> PerfectTed</div><div class="status">CREATIVE STUDY / 04</div></header>
+<main>
+<section class="hero" id="top"><div class="kicker reveal">AN IDEA FOR PERFECTTED / SEPT. 2026</div><h1><span class="reveal">MATCHA</span><span class="reveal">BECAME A</span><span class="serif reveal">personality.</span></h1><div class="hero-bottom"><p class="hero-copy reveal">PerfectTed already made matcha easy, social and desirable.<br><span>We thought the next move was to admit what happened to the people who bought it.</span></p><a class="scroll reveal" href="#insight">SEE<br>THE<br>IDEA ↓</a></div></section>
+<section class="insight" id="insight"><div class="section-label reveal">01 / THE TENSION</div><div class="insight-grid"><p class="reveal">Matcha stopped being just a drink. It became an identity signal, a ritual, a vocabulary, a tiny lifestyle upgrade.<br><br>So rather than pretending that didn’t happen, we’d make PerfectTed <strong>the brand self-aware enough to enjoy it.</strong></p><h2 class="reveal">THE PRODUCT<br>GOT POPULAR.<br><span>THE CUSTOMERS EVOLVED.</span></h2></div><div class="route reveal"><div><strong>01</strong>ENERGY</div><div><strong>02</strong>RITUAL</div><div><strong>03</strong>IDENTITY</div><div><strong>04</strong>SELF-AWARENESS</div></div></section>
+<section class="hooks"><div class="section-label reveal">02 / FIVE EXECUTIONS</div>
+<article class="hook reveal"><div class="hook-num">01 / THE CAMPAIGN</div><h3>YOU WANTED ENERGY.<span class="payoff">YOU GOT A WHOLE NEW PERSONALITY.</span><span class="tiny">PERFECTTED</span></h3></article>
+<article class="hook reveal"><div class="hook-num">02 / THE WHISK</div><h3>IT STARTED AS A DRINK.<span class="payoff">NOW YOU HAVE A CERAMIC WHISK.</span><span class="tiny">PERFECTTED</span></h3></article>
+<article class="hook reveal"><div class="hook-num">03 / THE EXPLANATION</div><h3>YOU SAID YOU JUST WANTED<br>A LITTLE MORE ENERGY.<span class="payoff">NOW YOU’RE EXPLAINING<br>L-THEANINE TO PEOPLE.</span><span class="tiny">PERFECTTED</span></h3></article>
+<article class="hook reveal"><div class="hook-num">04 / ACQUISITION</div><h3>FIRST YOU BOUGHT THE MATCHA.<span class="soft">THEN THE MATCHA BOUGHT YOU.</span><span class="tiny">PERFECTTED</span></h3></article>
+<article class="hook reveal"><div class="hook-num">05 / CHARACTER DEVELOPMENT</div><h3>YOU USED TO SAY “TEA.”<span class="payoff">LOOK AT YOU NOW.</span><span class="tiny">PERFECTTED</span></h3></article>
+</section>
+<section class="film"><div class="section-label reveal">03 / 15 SECOND FILM — “WHOLE NEW PERSONALITY”</div><div class="film-head"><h2 class="reveal">IDENTITY<br><span>ESCALATION.</span></h2><p class="reveal">Play it completely straight. No sketch-comedy mugging. The joke is that each tiny lifestyle upgrade arrives like it was inevitable.</p></div><div class="storyboard">
+<div class="shot reveal"><div class="tc">0:00–0:02</div><div><h3>DAY ONE.</h3><p>Office desk. Someone cracks open a PerfectTed. Drinks. Nothing unusual.</p></div><div class="sound">ROOM TONE / CAN OPEN / NO MUSIC</div></div>
+<div class="shot reveal"><div class="tc">0:02–0:04</div><div><h3>DAY TWO.</h3><p>Same desk. Same person. Now there’s a very nice glass bottle beside them.</p></div><div class="sound">KEYBOARD / SMALL GLASS CLINK</div></div>
+<div class="shot reveal"><div class="tc">0:04–0:06</div><div><h3>DAY THREE.</h3><p>A ceramic whisk appears. No one comments.</p></div><div class="sound">SOFT BRUSH OF WHISK / SILENCE</div></div>
+<div class="shot reveal"><div class="tc">0:06–0:08</div><div><h3>DAY FOUR.</h3><p>Now there’s a tiny bowl. The desk is quietly becoming a shrine.</p></div><div class="sound">BOWL SET DOWN / OFFICE HUM</div></div>
+<div class="shot reveal"><div class="tc">0:08–0:11</div><div><h3>THE SENTENCE.</h3><p>A colleague casually asks why they like it. Without looking up: “It’s the L-theanine.”</p></div><div class="sound">ONE LINE OF DIALOGUE. NOTHING ELSE.</div></div>
+<div class="shot reveal"><div class="tc">0:11–0:12</div><div><h3>THE LOOK.</h3><p>Colleague stares. Our person pauses. Tiny realization: oh. I’m this person now.</p></div><div class="sound">ONE SMALL, EMBARRASSING SILENCE.</div></div>
+<div class="shot reveal"><div class="tc">0:12–0:15</div><div><h3>BLACK.</h3><p>YOU WANTED ENERGY.<br>YOU GOT A WHOLE NEW PERSONALITY.<br><strong>PERFECTTED</strong></p></div><div class="sound">OPTIONAL: ONE TINY, SMUG PLINK.</div></div>
+</div></section>
+<section class="director"><div class="section-label reveal">DIRECTOR’S NOTE</div><blockquote class="reveal">The character never becomes ridiculous.<br><br>They just acquire <strong>one suspiciously specific object at a time.</strong><br><br>That restraint is the joke.</blockquote></section>
+<section class="endcard"><div class="section-label reveal">04 / THE CAMPAIGN LINE</div><h2 class="reveal">YOU WANTED ENERGY.<br><span class="payoff">YOU GOT A WHOLE NEW PERSONALITY.</span></h2><div class="product-line reveal">PerfectTed — matcha with enough self-awareness to admit what happened.</div></section>
+<section class="reserve"><div class="section-label reveal">05 / THE SLIGHTLY DANGEROUS ONE</div><h2 class="reveal">COFFEE WAS EASIER.<br><span>YOU WERE JUST TIRED.</span></h2><p class="reveal">We’d keep this one in reserve. It’s funny because it’s almost rude. Which is why it belongs in the room even if it never leaves it.</p></section>
+<section class="cta"><div class="section-label reveal">06 / IF THIS FEELS USEFUL</div><h2 class="reveal">WE DO THIS<br>FOR <span class="italic">real ads.</span></h2><div class="offer"><p class="reveal">One product. One day. No retainer.<br><br>A concentrated performance-creative rescue for brands whose ads have started behaving like wallpaper.</p><ul class="deliverables reveal"><li><span>NEW HOOKS</span><strong>10</strong></li><li><span>COMPLETE COPY REWRITES</span><strong>3</strong></li><li><span>CREATIVE DIRECTIONS</span><strong>2</strong></li><li><span>SHORT-FORM VIDEO SCRIPT</span><strong>1</strong></li><li><span>TURNAROUND</span><strong>24H</strong></li><li><span>PRICE</span><strong>€99</strong></li></ul></div><a class="cta-button reveal" href="mailto:hello@whcbb.work?subject=THE%20%E2%82%AC99%20AD%20FIX"><span>THE €99 AD FIX</span><span>↗</span></a></section>
+</main>
+<footer><div>WHCBB / WORK<br>MAKE THE AD WORK.<br>hello@whcbb.work</div><div class="right">SPECULATIVE CREATIVE STUDY.<br>INDEPENDENT CONCEPT BY WHCBB / WORK.<br>NOT COMMISSIONED, AFFILIATED WITH, OR ENDORSED BY PERFECTTED.</div></footer>
+<script>const bar=document.querySelector('.progress span');const onScroll=()=>{const d=document.documentElement,max=d.scrollHeight-d.clientHeight;bar.style.width=(max?((d.scrollTop/max)*100):0)+'%'};document.addEventListener('scroll',onScroll,{passive:true});onScroll();const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));</script>
+</body></html>
